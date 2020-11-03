@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Set judul di tab browser -->
+    <title>Latihan jQuery 3</title>
+</head>
+
+<!-- Set tampilan di web -->
+<style>
+    /* Btn */
+    #btnTambah{
+        background-color: #ee6f57;
+        border-color: #ee6f57;
+        color: white;
+        width: 110px;
+        height: 30px;
+    }
+    /* input bil1 */
+    #bil1{
+        height: 20px;
+        margin-right: 20px;
+        margin-left: 5px;
+    }
+    /* input bil2 */
+    #bil2{
+        height: 20px;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+</style>
+
+<body>
+
+    <!-- Membuat label dan input untuk bil1 -->
+    <label for="bil1">Bil1</label>
+    <input type="number" name="bil1" id="bil1">
+
+    <!-- Membuat label dan input untuk bil2 -->
+    <label for="bil2">Bil2</label>
+    <input type="number" name="bil2" id="bil2">
+
+    <!-- Membuat button -->
+    <input type="button" value="Tambah" id="btnTambah">
+
+    <!-- Cdn jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Script untuk menjalankan fungsi matematika
+        $('#btnTambah').on('click', function () {
+            let bil1 = $('#bil1').val();
+            let bil2 = $('#bil2').val();
+            let hasil = parseInt(bil1) + parseInt(bil2);
+            alert('Hasil : ' + hasil);
+        });
+    </script>
+</body>
+
+</html>

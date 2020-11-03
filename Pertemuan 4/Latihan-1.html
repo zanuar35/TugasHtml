@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Set Judul pada tab browser -->
+        <title>Latihan jQuery</title>
+    </head>
+    <body>
+        <!-- Membuat heading  -->
+        <h1 id="hello">Hello World</h1>
+        <!-- Paragraf -->
+        <p>Hello</p>
+        <!-- Input text -->
+        <input type="text" name="nama" id="teks">
+
+
+        <!-- CDN Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            // Fungsi untuk hide 
+            $(document).ready(function(){
+                $('#hello').on('click', function(){
+                    $(this).hide();
+                });
+
+                $('p').hover(function(){
+                    $(this).hide();
+                });
+
+                $('#teks').focus(function() {
+                    $(this).css('width','500px');        
+                });
+            });
+        </script>
+    </body>
+</html>

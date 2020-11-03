@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Set Judul pada bar browser -->
+    <title>Latihan jQuery 4</title>
+    <!-- Css untuk mengatur tampilan pada web -->
+    <style>
+        /* Tampilan Tulisan yang akan diubah */
+        .henshin {
+            color: white;
+            padding-bottom: 40px;
+            font-size: 40px;
+            background-color: black;
+        }
+        /* Tampilan button  */
+        .btn{
+            background-color: #ec524b;
+            border-color: #ec524b;
+            color: white;
+            font-weight: 600;
+            width: 150px;
+            height: 40px;
+            box-shadow: 1px 4px 2px #888888;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tulisan yang akan dieksekusi -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quod minima, pariatur magnam reprehenderit voluptas
+        ipsum sequi tenetur? Consequuntur, ipsum perferendis. Iure vero voluptate, vitae fuga cupiditate eligendi quasi
+        ea?</p>
+    <!-- Membuat button dengan class btn  -->
+    <button class="btn">Berubah</button>
+
+    <!-- Cdn jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Script yang akan dijalankan ketika button diclick
+        // Ketika button diclick , maka class henshin akan berubah
+        $('button').on('click', function () {
+            $('p').toggleClass('henshin');
+        });
+    </script>
+</body>
+
+</html>
